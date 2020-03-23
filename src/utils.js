@@ -19,11 +19,31 @@ module.exports.createStore = () => {
       primaryKey: true,
       autoIncrement: true,
     },
-    createdAt: SQL.DATE,
-    updatedAt: SQL.DATE,
-    email: SQL.STRING,
-    token: SQL.STRING,
+    email: SQL.STRING(100),
+    name: SQL.STRING(50),
+    role: SQL.STRING(20),
   });
 
-  return { users };
+  const entries = db.define('entry', {
+    id: {
+      type: SQL.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    entryDate: SQL.DATE,
+    startHour: SQL.STRING,
+    endHour: SQL.STRING,
+    user: {
+      type: SQL.INTEGER,
+      references: {
+        model: users,
+        key: 'ID',
+        deferrable: SQL.Deferrable.INITIALLY_IMMEDIATE,
+      },
+    },
+    creationDate: SQL.STRING,
+    modificationDate: SQL.STRING,
+  });
+
+  return { entries, users };
 };

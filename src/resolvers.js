@@ -1,5 +1,13 @@
 module.exports = {
   Mutation: {
+    addUpdateUser: async (_, { email }, { dataSources }) => {
+      const user = await dataSources.userAPI.findOrCreateUser({ email });
+      return {
+        success: !!user,
+        message: 'whatever',
+        user: user,
+      };
+    },
     login: async (_, { email }, { dataSources }) => {
       const user = await dataSources.userAPI.findOrCreateUser({ email });
       if (user) return Buffer.from(email).toString('base64');

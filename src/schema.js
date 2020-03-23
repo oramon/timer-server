@@ -34,7 +34,7 @@ const typeDefs = gql`
 
   type Mutation {
     addUpdateEntry(id: ID): EntryUpdateResponse
-    addUpdateUser(id: ID): UserUpdateResponse
+    addUpdateUser(email: String!): UserUpdateResponse
     removeEntry(id: ID!): EntryUpdateResponse
     removeUser(id: ID!): UserUpdateResponse
     login(email: String): String # login token
