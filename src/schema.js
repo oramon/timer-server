@@ -29,12 +29,13 @@ const typeDefs = gql`
     entries: [Entry]
     me: User
     users: [User]
+    user(email: String!): User
     userEntries(id: ID): [Entry]
   }
 
   type Mutation {
     addUpdateEntry(id: ID): EntryUpdateResponse
-    addUpdateUser(email: String!): UserUpdateResponse
+    addUpdateUser(email: String!, name: String!, role: String!): UserUpdateResponse
     removeEntry(id: ID!): EntryUpdateResponse
     removeUser(id: ID!): UserUpdateResponse
     login(email: String): String # login token
