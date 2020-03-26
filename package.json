@@ -4,8 +4,8 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "start": "nodemon src/index.js",
-    "start:ci": "node src/index.js",
+    "start": "node src/index.js",
+    "start:dev": "nodemon src/index.js",
     "init:db": "node src/database.js"
   },
   "author": "",
