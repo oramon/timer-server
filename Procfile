@@ -1,1 +1,1 @@
-web: ls -la ..; ls -la ../app
+web: yarn start:heroku
