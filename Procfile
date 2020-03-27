@@ -1,1 +1,1 @@
-web: yarn && yarn start:heroku
+web: rm -rf node_modules package-lock.json && yarn install && yarn start:heroku
