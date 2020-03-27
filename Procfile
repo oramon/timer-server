@@ -1,1 +1,1 @@
-web: yarn install; ls -la
+web: yarn install; yarn start;
