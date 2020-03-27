@@ -1,1 +1,1 @@
-web: yarn install; yarn start:heroku;
+web: cd src; yarn install; yarn start:heroku;
