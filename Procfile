@@ -1,1 +1,1 @@
-web: yarn install && yarn start:heroku
+web: yarn install && yarn init:db_data && yarn start:heroku

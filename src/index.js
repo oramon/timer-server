@@ -44,7 +44,8 @@ const server = new ApolloServer({
   }),
   typeDefs,
   resolvers,
-  context: { store }
+  context: { store },
+  playground: true
 });
 
 const app = express();

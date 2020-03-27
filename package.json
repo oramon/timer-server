@@ -7,7 +7,8 @@
     "start": "node ./src/index.js",
     "start:dev": "nodemon ./src/index.js",
     "start:heroku": "node /app/src/index.js",
-    "init:db": "node ./src/database.js"
+    "init:db_tables": "node ./src/database.js",
+    "init:db_data": "node ./src/database.js dev"
   },
   "author": "",
   "license": "ISC",
@@ -29,9 +30,7 @@
     "jest": "^23.6.0",
     "nock": "^10.0.2",
     "node-fetch": "^2.2.1",
-    "nodemon": "^1.19.4",
-    "sequelize": "^5.21.5",
-    "sqlite3": "^4.1.1"
+    "nodemon": "^1.19.4"
   },
   "jest": {
     "testPathIgnorePatterns": [
