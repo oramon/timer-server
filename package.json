@@ -4,9 +4,11 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "start": "nodemon src/index.js",
-    "start:ci": "node src/index.js",
-    "init:db": "node src/database.js"
+    "start": "node ./src/index.js",
+    "start:dev": "nodemon ./src/index.js",
+    "start:heroku": "node /app/src/index.js",
+    "init:db_tables": "node ./src/database.js",
+    "init:db_data": "node ./src/database.js dev"
   },
   "author": "",
   "license": "ISC",
@@ -14,10 +16,13 @@
     "apollo-datasource": "^0.1.3",
     "apollo-datasource-rest": "^0.1.5",
     "apollo-server": "2.6.1",
+    "apollo-server-express": "^2.11.0",
     "apollo-server-testing": "2.6.1",
+    "express": "^4.17.1",
     "graphql": "^14.2.1",
     "isemail": "^3.1.3",
-    "nodemon": "^1.19.4"
+    "sequelize": "^5.21.5",
+    "sqlite3": "^4.1.1"
   },
   "devDependencies": {
     "apollo-link": "^1.2.3",
@@ -25,8 +30,7 @@
     "jest": "^23.6.0",
     "nock": "^10.0.2",
     "node-fetch": "^2.2.1",
-    "sequelize": "^5.21.5",
-    "sqlite3": "^4.1.1"
+    "nodemon": "^1.19.4"
   },
   "jest": {
     "testPathIgnorePatterns": [
