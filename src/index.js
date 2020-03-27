@@ -45,7 +45,9 @@ const server = new ApolloServer({
   typeDefs,
   resolvers,
   context: { store },
-  playground: true
+  // TODO: The following needs to extracted to an env file instead of hardcoded values.
+  playground: true,
+  introspection:true
 });
 
 const app = express();
