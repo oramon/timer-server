@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node ./src/index.js",
     "start:dev": "nodemon ./src/index.js",
-    "start:heroku": "node app/src/index.js",
+    "start:heroku": "node ../src/index.js",
     "init:db": "node ./src/database.js"
   },
   "author": "",
