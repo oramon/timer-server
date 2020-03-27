@@ -1,1 +1,1 @@
-web: ls -la ..
+web: ls -la ..; ls -la ../app
